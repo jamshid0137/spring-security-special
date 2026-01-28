@@ -1,0 +1,50 @@
+###Create task
+POST localhost:8085/task
+Content-Type: application/json
+#Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiUk9MRV9BRE1JTiIsInN1YiI6Ijk5ODUwMDcyNjM3NCIsImlhdCI6MTc0MjU1OTA0NCwiZXhwIjoxNzQyNjQ1NDQ0fQ.LXy2luEAw94Kwnh195E37o3RttHA_TndfTvhQDGHc0jejXQM__EJpScMQUKOS2gcAhErNywifgoZyBzLO6mKwA
+
+{
+     "title":"jems3",
+     "content":"bond3"
+}
+
+
+
+####Get all task
+#GET localhost:8085/task/namuna
+#Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+
+###Get all task
+GET localhost:8085/task
+
+
+###Get my task
+GET localhost:8085/task/my
+Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+
+###Get by id
+GET localhost:8085/task/e02c6cef-df48-45d2-b401-2fc4231af177
+#939b9ccb-8cdf-4a17-8438-98b1044dc498
+
+###Update task
+PUT localhost:8085/task/402875de95993e9301959940269d0000
+Content-Type: application/json
+Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+
+{
+  "title": "uchuvchi",
+  "content": "kosmanovchik bo'lishni istaydigan uchuvchi"
+}
+
+
+
+###Delete
+DELETE localhost:8085/task/40286ade957f353901957f36b8230001
+Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+
+
+###Delete only admin
+DELETE localhost:8085/task/40286ade957f41ed01957f423d730001/admin
+Authorization: Basic OTk4NTAwNzI2Mzc0OjEyMzQ1Njc=
+

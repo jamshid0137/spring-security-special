@@ -1,0 +1,61 @@
+###Create profile raqam uniq bo'lishi garak
+###Registratsiya funksiyasi
+POST localhost:8085/profile/registration
+Content-Type: application/json
+
+{
+  "name": "Jamshid",
+  "surname": "Madaminov",
+  "phone": "94765893432981",
+  "password": "1234567",
+  "role": "ROLE_STUDENT"
+
+}
+
+
+
+###Create profile
+POST localhost:8085/profile/registration
+Content-Type: application/json
+
+{
+
+  "name": "Aziz",
+  "surname": "Cho'lliyev",
+  "phone": "99048324226",
+  "password": "jama123",
+  "role": "ROLE_ADMIN"
+
+}
+
+
+
+###authorization -bu login parolni berib o'zini malumotlari va jwt tokenni olish
+###Login qilib tizimga kirish
+POST localhost:8085/profile/authorization
+Content-Type: application/json
+
+{
+  "phone": "94945159006",
+  "password": "1234567"
+}
+
+
+
+
+
+
+
+###Get all profile
+
+
+
+
+###authorization -bu login parolni berib o'zini malumotlari va jwt tokenni olish
+POST localhost:8085/profile/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiUk9MRV9BRE1JTiIsInN1YiI6Ijk5ODUwMDcyNjM3NCIsImlhdCI6MTc0MjU1OTA0NCwiZXhwIjoxNzQyNjQ1NDQ0fQ.LXy2luEAw94Kwnh195E37o3RttHA_TndfTvhQDGHc0jejXQM__EJpScMQUKOS2gcAhErNywifgoZyBzLO6mKwA"
+
+}
